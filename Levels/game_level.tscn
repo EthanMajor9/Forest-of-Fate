@@ -329,6 +329,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_mkwnw")
 
 [node name="GameLevel" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_80uyp")]
 position = Vector2(84, 90)
