@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://eqfux00uibvh"
+path="res://.godot/imported/Final Struggle (Boss Theme).wav-a8fd8036a75d3cc1da2c18f297e6008e.sample"
+
+[deps]
+
+source_file="res://Audio/Music/Free Orchestral Music Pack/Final Struggle (Boss Theme).wav"
+dest_files=["res://.godot/imported/Final Struggle (Boss Theme).wav-a8fd8036a75d3cc1da2c18f297e6008e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
