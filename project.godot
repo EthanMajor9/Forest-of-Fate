@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="VARLab Game Jam"
-run/main_scene="res://Levels/game_level.tscn"
+run/main_scene="res://Levels/level1.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+PlayerVariables="*res://Characters/Player/PlayerVariables.gd"
 
 [display]
 
@@ -55,7 +59,7 @@ jump={
 
 [physics]
 
-2d/default_gravity=326.667
+2d/default_gravity=580.0
 
 [rendering]
 
