@@ -270,6 +270,7 @@ landing_state = NodePath("../Ground")
 audio_player = NodePath("../../AudioPlayer")
 
 [node name="DebugLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+visible = false
 offset_left = -51.0
 offset_top = -54.0
 offset_right = -11.0

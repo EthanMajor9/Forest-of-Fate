@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dvpgdw808y1lp"]
+[gd_scene load_steps=24 format=3 uid="uid://dvpgdw808y1lp"]
 
 [ext_resource type="Texture2D" uid="uid://c40yjffboxac3" path="res://Art/oak_woods_v1.0/background/background_layer_1.png" id="1_m0a24"]
 [ext_resource type="Texture2D" uid="uid://bvxw1ym4bgypi" path="res://Art/oak_woods_v1.0/background/background_layer_2.png" id="2_m1yoc"]
@@ -16,6 +16,9 @@
 [ext_resource type="AudioStream" uid="uid://b8ejmkoflto7j" path="res://Audio/Music/Free Orchestral Music Pack/Aspiration Woods (Area Theme).wav" id="14_rrmwf"]
 [ext_resource type="PackedScene" uid="uid://cyd4hoddlfpf7" path="res://Objects/collectible_key.tscn" id="15_5igir"]
 [ext_resource type="PackedScene" uid="uid://ci07h3xddsfxe" path="res://UI/key_count.tscn" id="16_6t27v"]
+[ext_resource type="PackedScene" uid="uid://b2b88cfy4kbd8" path="res://UI/health_bar.tscn" id="17_a4oee"]
+[ext_resource type="PackedScene" uid="uid://cyx7k57udk6oy" path="res://Objects/coin.tscn" id="18_ax261"]
+[ext_resource type="PackedScene" uid="uid://bglg3iiw73ea3" path="res://UI/coin_count.tscn" id="19_6r1lk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2uxa"]
 texture = ExtResource("5_7ncym")
@@ -7325,12 +7328,14 @@ scene_to_load = ExtResource("9_s1rhu")
 
 [node name="KeyCountUI" parent="UI" instance=ExtResource("16_6t27v")]
 
+[node name="HealthBar" parent="UI" instance=ExtResource("17_a4oee")]
+
 [node name="Objects" type="Node" parent="."]
 
 [node name="Portal" parent="Objects" node_paths=PackedStringArray("transitioner", "character") instance=ExtResource("10_1uxx2")]
 z_index = 1
-position = Vector2(621, -49)
-scale = Vector2(1.3, 1.3)
+position = Vector2(620, -57)
+scale = Vector2(1.5, 1.5)
 transitioner = NodePath("../../LevelTransition/Transitions")
 character = NodePath("../../Player")
 
@@ -7358,3 +7363,9 @@ scale = Vector2(100, 1)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_rrmwf")
 autoplay = true
+
+[node name="Coin" parent="." instance=ExtResource("18_ax261")]
+z_index = 1
+position = Vector2(250, 27)
+
+[node name="coin_count" parent="." instance=ExtResource("19_6r1lk")]
