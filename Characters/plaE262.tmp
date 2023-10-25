@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://xda1270hkbor"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xw5h4"]
+radius = 8.0
+height = 28.0
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6, -3)
+hframes = 6
+vframes = 17
+frame = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 3)
+shape = SubResource("CapsuleShape2D_xw5h4")

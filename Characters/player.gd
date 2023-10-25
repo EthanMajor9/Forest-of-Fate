@@ -1,35 +1,41 @@
 extends CharacterBody2D
 
-@export var move_speed : float = 100
+@export var move_speed : float = 200.0
 
-@onready var sprite = $Sprite2D	
-@onready var animation_tree = $AnimationTree
-@onready var state_machine = animation_tree.get("parameters/playback")
+@onready var sprite : Sprite2D = $Sprite2D
+@onready var animation_tree : AnimationTree = $AnimationTree
+@onready var state_machine : CharacterStateMachine = $CharacterStateMachine
 
-func _physics_process(_delta):
-	var move_direction = Vector2(
-		Input.get_action_strength("right") - Input.get_action_strength("left"),
-		Input.get_action_strength("down") - Input.get_action_strength("up"),		
-	)
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity : float = ProjectSettings.get_setting("physics/2d/default_gravity")
+var direction : Vector2 = Vector2.ZERO
+
+func _ready():
+	animation_tree.active = true
+
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	direction = Input.get_vector("left", "right", "up", "down")
 	
-	update_direction(move_direction)		
-	velocity = move_direction * move_speed
-	select_new_state()
-	
-	move_and_slide()
-
-
-func update_direction(move_direction):
-	if(move_direction != Vector2.ZERO):
-		if(move_direction.x > 0):
-			sprite.flip_h = false;
-		else:
-			sprite.flip_h = true;
-			
-func select_new_state():
-	if(velocity != Vector2.ZERO):
-		state_machine.travel("Run")
+	if direction.x != 0 && state_machine.check_if_can_move():
+		velocity.x = direction.x * move_speed
 	else:
-		state_machine.travel("Idle")
+		velocity.x = move_toward(velocity.x, 0, move_speed)
 		
+	move_and_slide()
+	update_animation_parameters()
+	update_sprite_direction()		
+	
+func update_animation_parameters():
+	animation_tree.set("parameters/Move/blend_position", direction.x)
 			
+func update_sprite_direction():
+	if direction.x < 0:
+		sprite.flip_h = true;
+	elif direction.x > 0:
+		sprite.flip_h = false;

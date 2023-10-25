@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dvpgdw808y1lp"]
+[gd_scene load_steps=18 format=3 uid="uid://dvpgdw808y1lp"]
 
 [ext_resource type="PackedScene" uid="uid://xda1270hkbor" path="res://Characters/player.tscn" id="1_80uyp"]
 [ext_resource type="Texture2D" uid="uid://h0doudlq28e1" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="2_ibwtf"]
@@ -9,8 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://c83r0irmvdc62" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tree-Assets.png" id="7_qgtk5"]
 [ext_resource type="Texture2D" uid="uid://ymnonwelmtby" path="res://Art/Legacy-Fantasy - High Forest 2.3/Background/Background.png" id="8_fv31i"]
 [ext_resource type="PackedScene" uid="uid://bjcafqxrlu2p5" path="res://UI/transitions.tscn" id="9_jw4du"]
-[ext_resource type="PackedScene" uid="uid://b6cblsqytp150" path="res://Levels/level2.tscn" id="10_xd6ac"]
-[ext_resource type="PackedScene" uid="uid://cemir5g26gluw" path="res://Objects/portal.tscn" id="11_6187n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ruggf"]
 texture = ExtResource("2_ibwtf")
@@ -7063,10 +7061,3 @@ layer_1/tile_data = PackedInt32Array(-131103, 7, 7, -65567, 7, 8, -31, 7, 11, 65
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Transitions" parent="CanvasLayer" instance=ExtResource("9_jw4du")]
-scene_switch_anim = "fade_in"
-scene_to_load = ExtResource("10_xd6ac")
-
-[node name="Portal" parent="." node_paths=PackedStringArray("transitioner", "character") instance=ExtResource("11_6187n")]
-position = Vector2(478, -1)
-transitioner = NodePath("../CanvasLayer/Transitions")
-character = NodePath("../Player")
