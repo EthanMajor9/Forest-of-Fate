@@ -4,7 +4,7 @@
 
 # Godot 4 Game - VARLab Code Jam
 
-Welcome to my 2D platformer/roguelike game created for the VARLab Code Jam. This project is an opportunity for me to dive into Godot and explore game development in this fantastic engine.
+Welcome to my 2D platformer game created for the VARLab Code Jam. This project is an opportunity for me to dive into Godot and explore game development in this fantastic engine.
 
 ## Table of Contents
 - [Game Overview](#game-overview)
@@ -15,7 +15,7 @@ Welcome to my 2D platformer/roguelike game created for the VARLab Code Jam. This
 
 ## Game Overview
 
-This game is a 2D platformer/roguelike, offering an exciting mix of platforming challenges and procedural generation that keeps the gameplay fresh and engaging.
+This game is a 2D platformer, offering an exciting mix of platforming challenges and puzzles that keeps the gameplay fresh and engaging.
 
 ## Getting Started
 
@@ -31,8 +31,6 @@ To run the game locally, follow these steps:
 
 ## Features
 * Exciting 2D platformer action.
-* Roguelike elements for added challenge and replayability.
-* Procedurally generated levels.
 * Unique power-ups and enemies to discover.
 * and more!
 
