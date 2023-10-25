@@ -10,10 +10,12 @@ class_name Player
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity : float = ProjectSettings.get_setting("physics/2d/default_gravity")
+var player_vars : PlayerVariables
 var direction : Vector2 = Vector2.ZERO
 
 func _ready():
 	animation_tree.active = true
+	player_vars = get_node("/root/PlayerVariables")
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -32,6 +34,8 @@ func _physics_process(delta):
 	move_and_slide()
 	update_animation_parameters()
 	update_sprite_direction()		
+	
+	print(player_vars.key_count)
 	
 func update_animation_parameters():
 	animation_tree.set("parameters/Move/blend_position", direction.x)
