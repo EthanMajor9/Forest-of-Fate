@@ -1,19 +1,21 @@
-[gd_scene load_steps=16 format=3 uid="uid://dvpgdw808y1lp"]
+[gd_scene load_steps=18 format=3 uid="uid://dvpgdw808y1lp"]
 
-[ext_resource type="PackedScene" uid="uid://xda1270hkbor" path="res://Characters/Player/player.tscn" id="1_80uyp"]
-[ext_resource type="Texture2D" uid="uid://bvxw1ym4bgypi" path="res://Art/oak_woods_v1.0/background/background_layer_2.png" id="2_lko5m"]
-[ext_resource type="Texture2D" uid="uid://bn750e5cu2uuc" path="res://Art/Village/TX Tileset Ground.png" id="2_vfcc3"]
-[ext_resource type="Texture2D" uid="uid://cmnrg801tgbny" path="res://Art/oak_woods_v1.0/background/background_layer_3.png" id="3_6rmvk"]
-[ext_resource type="Texture2D" uid="uid://biyrmy3xh7t0q" path="res://Art/Village/TX Village Props.png" id="3_r8lh2"]
-[ext_resource type="Texture2D" uid="uid://uhqvywcfh25y" path="res://Art/oak_woods_v1.0/oak_woods_tileset.png" id="5_5asqg"]
-[ext_resource type="Texture2D" uid="uid://c40yjffboxac3" path="res://Art/oak_woods_v1.0/background/background_layer_1.png" id="7_e3dle"]
-[ext_resource type="PackedScene" uid="uid://bjcafqxrlu2p5" path="res://UI/transitions.tscn" id="9_jw4du"]
-[ext_resource type="PackedScene" uid="uid://b6cblsqytp150" path="res://Levels/level2.tscn" id="10_xd6ac"]
-[ext_resource type="PackedScene" uid="uid://cemir5g26gluw" path="res://Objects/portal.tscn" id="11_6187n"]
-[ext_resource type="PackedScene" uid="uid://cp6o0ukxmvee" path="res://Objects/bounce_pad.tscn" id="11_gn02h"]
+[ext_resource type="Texture2D" uid="uid://c40yjffboxac3" path="res://Art/oak_woods_v1.0/background/background_layer_1.png" id="1_h463d"]
+[ext_resource type="Texture2D" uid="uid://bvxw1ym4bgypi" path="res://Art/oak_woods_v1.0/background/background_layer_2.png" id="2_tlqcc"]
+[ext_resource type="Texture2D" uid="uid://cmnrg801tgbny" path="res://Art/oak_woods_v1.0/background/background_layer_3.png" id="3_o681h"]
+[ext_resource type="PackedScene" uid="uid://xda1270hkbor" path="res://Characters/Player/player.tscn" id="4_5ajyw"]
+[ext_resource type="Texture2D" uid="uid://uhqvywcfh25y" path="res://Art/oak_woods_v1.0/oak_woods_tileset.png" id="5_yt6aq"]
+[ext_resource type="Texture2D" uid="uid://bn750e5cu2uuc" path="res://Art/Village/TX Tileset Ground.png" id="6_1ipqa"]
+[ext_resource type="Texture2D" uid="uid://biyrmy3xh7t0q" path="res://Art/Village/TX Village Props.png" id="7_6q5pw"]
+[ext_resource type="PackedScene" uid="uid://bjcafqxrlu2p5" path="res://UI/transitions.tscn" id="8_f47cx"]
+[ext_resource type="PackedScene" uid="uid://b6cblsqytp150" path="res://Levels/level2.tscn" id="9_st7g0"]
+[ext_resource type="PackedScene" uid="uid://cemir5g26gluw" path="res://Objects/portal.tscn" id="10_hqc67"]
+[ext_resource type="PackedScene" uid="uid://cp6o0ukxmvee" path="res://Objects/bounce_pad.tscn" id="11_gy1b4"]
+[ext_resource type="PackedScene" uid="uid://yokdcd8x1dpx" path="res://Managers/position_manager.tscn" id="12_ppecl"]
+[ext_resource type="PackedScene" uid="uid://dlga8r6djh4tv" path="res://Objects/moving_platform.tscn" id="13_0ggas"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2uxa"]
-texture = ExtResource("5_5asqg")
+texture = ExtResource("5_yt6aq")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1246,7 +1248,7 @@ texture = ExtResource("5_5asqg")
 30:21/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mkxbq"]
-texture = ExtResource("2_vfcc3")
+texture = ExtResource("6_1ipqa")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -3300,7 +3302,7 @@ texture = ExtResource("2_vfcc3")
 31:31/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ummbc"]
-texture = ExtResource("3_r8lh2")
+texture = ExtResource("7_6q5pw")
 26:0/0 = 0
 26:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 26:0/0/physics_layer_0/angular_velocity = 0.0
@@ -7232,36 +7234,45 @@ sources/7 = SubResource("TileSetAtlasSource_mkxbq")
 sources/8 = SubResource("TileSetAtlasSource_ummbc")
 sources/12 = SubResource("TileSetAtlasSource_c2uxa")
 
-[node name="GameLevel" type="Node2D"]
+[node name="testLevel" type="Node2D"]
 y_sort_enabled = true
 
 [node name="Background" type="Node" parent="."]
 
 [node name="Layer1" type="TextureRect" parent="Background"]
-offset_left = -406.0
-offset_top = -523.0
-offset_right = 1044.0
-offset_bottom = 224.0
-texture = ExtResource("7_e3dle")
+anchors_preset = -1
+anchor_left = -0.257
+anchor_right = 0.062
+offset_left = -444.0
+offset_top = -500.0
+offset_right = 1006.0
+offset_bottom = 247.0
+texture = ExtResource("1_h463d")
 metadata/_edit_use_anchors_ = true
 
 [node name="Layer2" type="TextureRect" parent="Background"]
-offset_left = -411.0
-offset_top = -516.0
-offset_right = 1042.0
-offset_bottom = 229.0
-texture = ExtResource("2_lko5m")
+anchors_preset = -1
+anchor_left = -0.249
+anchor_right = 0.062
+offset_left = -449.0
+offset_top = -493.0
+offset_right = 1004.0
+offset_bottom = 252.0
+texture = ExtResource("2_tlqcc")
 metadata/_edit_use_anchors_ = true
 
 [node name="Layer3" type="TextureRect" parent="Background"]
-offset_left = -407.0
-offset_top = -525.0
-offset_right = 1033.0
-offset_bottom = 223.0
-texture = ExtResource("3_6rmvk")
+anchors_preset = -1
+anchor_left = -0.255
+anchor_right = 0.07
+offset_left = -445.0
+offset_top = -502.0
+offset_right = 995.0
+offset_bottom = 246.0
+texture = ExtResource("3_o681h")
 metadata/_edit_use_anchors_ = true
 
-[node name="Player" parent="." instance=ExtResource("1_80uyp")]
+[node name="Player" parent="." instance=ExtResource("4_5ajyw")]
 z_index = 1
 position = Vector2(-21, 33)
 scale = Vector2(0.75, 0.75)
@@ -7277,7 +7288,6 @@ zoom = Vector2(1.5, 1.5)
 process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
-drag_vertical_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = 1
@@ -7288,18 +7298,29 @@ layer_0/tile_data = PackedInt32Array(327677, 65548, 0, 393213, 131084, 2, 458749
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Transitions" parent="CanvasLayer" instance=ExtResource("9_jw4du")]
+[node name="Transitions" parent="CanvasLayer" instance=ExtResource("8_f47cx")]
 scene_switch_anim = "fade_in"
-scene_to_load = ExtResource("10_xd6ac")
+scene_to_load = ExtResource("9_st7g0")
 
-[node name="Portal" parent="." node_paths=PackedStringArray("transitioner", "character") instance=ExtResource("11_6187n")]
+[node name="Portal" parent="." node_paths=PackedStringArray("transitioner", "character") instance=ExtResource("10_hqc67")]
 z_index = 1
 position = Vector2(621, -49)
 scale = Vector2(1.3, 1.3)
 transitioner = NodePath("../CanvasLayer/Transitions")
 character = NodePath("../Player")
 
-[node name="BouncePad" parent="." instance=ExtResource("11_gn02h")]
+[node name="BouncePad" parent="." instance=ExtResource("11_gy1b4")]
 z_index = 1
-position = Vector2(447, 51)
-scale = Vector2(1.5, 1.5)
+position = Vector2(448, 50)
+scale = Vector2(1.75, 1.75)
+
+[node name="PositionManagerParent" type="Node" parent="."]
+
+[node name="PositionManager" parent="PositionManagerParent" instance=ExtResource("12_ppecl")]
+z_index = 1
+position = Vector2(247, 232)
+scale = Vector2(100, 1)
+
+[node name="MovingPlatform" parent="." instance=ExtResource("13_0ggas")]
+z_index = 1
+position = Vector2(491, -4)

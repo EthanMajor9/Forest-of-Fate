@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlga8r6djh4tv"]
+
+[ext_resource type="Script" path="res://MovingPlatform.gd" id="1_2jdav"]
+[ext_resource type="Texture2D" uid="uid://dvrv5sot4fncw" path="res://Art/oak_woods_v1.0/decorations/fence_1.png" id="2_dixqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjt0u"]
+size = Vector2(70, 20)
+
+[node name="MovingPlatform" type="Node2D" node_paths=PackedStringArray("platform")]
+script = ExtResource("1_2jdav")
+platform = NodePath("Platform")
+
+[node name="Platform" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+texture = ExtResource("2_dixqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+shape = SubResource("RectangleShape2D_tjt0u")
