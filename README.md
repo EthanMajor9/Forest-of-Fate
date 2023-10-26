@@ -35,6 +35,8 @@ To run the game locally, follow these steps:
 * and more!
 
 ## Screenshots
+### Main Menu
+![Main Menu](/Github/Screenshots/main_menu.png)
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
