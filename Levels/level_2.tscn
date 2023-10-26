@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6cblsqytp150"]
 
-[ext_resource type="Script" path="res://Levels/LevelScripts/level_2.gd" id="1_apomn"]
-[ext_resource type="PackedScene" uid="uid://bjcafqxrlu2p5" path="res://UI/transitions.tscn" id="2_o8lom"]
+[ext_resource type="Script" path="res://Levels/LevelScripts/level_2.gd" id="1_fq0dp"]
+[ext_resource type="PackedScene" uid="uid://bjcafqxrlu2p5" path="res://UI/transitions.tscn" id="2_fjwea"]
 
 [node name="Level2" type="Node2D" node_paths=PackedStringArray("transitioner")]
-script = ExtResource("1_apomn")
+script = ExtResource("1_fq0dp")
 transitioner = NodePath("CanvasLayer/Transitions")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Transitions" parent="CanvasLayer" instance=ExtResource("2_o8lom")]
+[node name="Transitions" parent="CanvasLayer" instance=ExtResource("2_fjwea")]

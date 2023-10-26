@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=3 uid="uid://dvpgdw808y1lp"]
 
-[ext_resource type="Script" path="res://Levels/test_level.gd" id="1_d6do2"]
-[ext_resource type="Texture2D" uid="uid://c40yjffboxac3" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_1.png" id="1_o8yb6"]
-[ext_resource type="Texture2D" uid="uid://bvxw1ym4bgypi" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_2.png" id="2_oiq2s"]
-[ext_resource type="Texture2D" uid="uid://cmnrg801tgbny" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_3.png" id="3_nd4bh"]
-[ext_resource type="AudioStream" uid="uid://dosji0klyhf5v" path="res://Audio/Music/Free Orchestral Music Pack/Lost Kingdom (Piano Menu).wav" id="5_mlqr5"]
-[ext_resource type="Texture2D" uid="uid://d0ylortrci25x" path="res://Art/3rdParty/Mossy Cavern Art Pack/BlueWizard/2BlueWizardIdle/Chara - BlueIdle00000.png" id="6_prxll"]
+[ext_resource type="Script" path="res://Levels/LevelScripts/intro_cutscene.gd" id="1_fyps0"]
+[ext_resource type="Texture2D" uid="uid://c40yjffboxac3" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_1.png" id="2_fk47o"]
+[ext_resource type="Texture2D" uid="uid://bvxw1ym4bgypi" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_2.png" id="3_fgpxo"]
+[ext_resource type="Texture2D" uid="uid://cmnrg801tgbny" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_3.png" id="4_jq7s5"]
+[ext_resource type="AudioStream" uid="uid://dosji0klyhf5v" path="res://Audio/Music/Free Orchestral Music Pack/Lost Kingdom (Piano Menu).wav" id="5_1wfqb"]
+[ext_resource type="Texture2D" uid="uid://d0ylortrci25x" path="res://Art/3rdParty/Mossy Cavern Art Pack/BlueWizard/2BlueWizardIdle/Chara - BlueIdle00000.png" id="6_12grr"]
 
 [sub_resource type="Animation" id="Animation_loac8"]
 resource_name = "intro_cutscene"
-length = 50.0
+length = 47.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -17,7 +17,7 @@ tracks/0/path = NodePath("Wizard:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(20.1, 23, 40.9, 44),
+"times": PackedFloat32Array(20.1, 23, 37.9, 42.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -109,11 +109,11 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("TextureRect:visible")
+tracks/8/path = NodePath("Transition:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 44.1),
+"times": PackedFloat32Array(0, 43.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -121,11 +121,11 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("TextureRect:size")
+tracks/9/path = NodePath("Transition:size")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 44.1, 45.4, 46.6, 47.8, 48.8),
+"times": PackedFloat32Array(0, 42.7, 43.6, 44.5, 45.3, 46.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(64, 64), Vector2(1000, 1000), Vector2(2000, 2000), Vector2(3000, 3000), Vector2(4000, 4000)]
@@ -137,7 +137,7 @@ tracks/10/path = NodePath("AudioPlayer:volume_db")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(45.7, 47.9, 48.9),
+"times": PackedFloat32Array(43.7, 45.3, 46.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [-2.0, -10.0, -15.0]
@@ -161,7 +161,7 @@ metadata/_snap_enabled = true
 
 [node name="IntroCutscene" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_d6do2")
+script = ExtResource("1_fyps0")
 
 [node name="Background" type="Node" parent="."]
 
@@ -175,7 +175,7 @@ offset_left = -444.0
 offset_top = -500.0
 offset_right = 1006.0
 offset_bottom = 247.0
-texture = ExtResource("1_o8yb6")
+texture = ExtResource("2_fk47o")
 metadata/_edit_use_anchors_ = true
 
 [node name="Layer2" type="TextureRect" parent="Background"]
@@ -188,7 +188,7 @@ offset_left = -449.0
 offset_top = -493.0
 offset_right = 1004.0
 offset_bottom = 252.0
-texture = ExtResource("2_oiq2s")
+texture = ExtResource("3_fgpxo")
 metadata/_edit_use_anchors_ = true
 
 [node name="Layer3" type="TextureRect" parent="Background"]
@@ -201,7 +201,7 @@ offset_left = -445.0
 offset_top = -502.0
 offset_right = 995.0
 offset_bottom = 246.0
-texture = ExtResource("3_nd4bh")
+texture = ExtResource("4_jq7s5")
 metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -214,7 +214,7 @@ position = Vector2(153, -156)
 zoom = Vector2(0.5, 0.5)
 
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_mlqr5")
+stream = ExtResource("5_1wfqb")
 volume_db = -2.0
 autoplay = true
 
@@ -259,7 +259,7 @@ theme_override_font_sizes/font_size = 35
 text = "The lone guardian of this realm, a nameless wizard, must rise to the challenge..."
 
 [node name="Dialogue5" type="Label" parent="."]
-modulate = Color(1, 1, 1, 0.125)
+modulate = Color(1, 1, 1, 0)
 z_index = 1
 offset_left = -804.0
 offset_top = -461.0
@@ -269,7 +269,7 @@ theme_override_font_sizes/font_size = 33
 text = "With the weight of destiny upon their shoulders, the lone wizard embarks on a perilous journey, "
 
 [node name="Dialogue6" type="Label" parent="."]
-modulate = Color(1, 1, 1, 0.5)
+modulate = Color(1, 1, 1, 0)
 z_index = 1
 offset_left = -2.0
 offset_top = -397.0
@@ -279,15 +279,15 @@ theme_override_font_sizes/font_size = 33
 text = "determined to cleanse the forest and restore its ancient magic..."
 
 [node name="Wizard" type="TextureRect" parent="."]
-modulate = Color(1, 1, 1, 0.714285)
+modulate = Color(1, 1, 1, 0)
 z_index = 1
 offset_left = -93.0
 offset_top = -259.0
 offset_right = 419.0
 offset_bottom = 253.0
-texture = ExtResource("6_prxll")
+texture = ExtResource("6_12grr")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Transition" type="TextureRect" parent="."]
 visible = false
 z_index = 1
 anchors_preset = 8
