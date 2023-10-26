@@ -7330,9 +7330,9 @@ scene_to_load = ExtResource("9_s1rhu")
 
 [node name="KeyCountUI" parent="UI" instance=ExtResource("16_6t27v")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+[node name="HealthBarContainer" type="CanvasLayer" parent="UI"]
 
-[node name="HealthBar" parent="UI/CanvasLayer" instance=ExtResource("17_a4oee")]
+[node name="HealthBar" parent="UI/HealthBarContainer" instance=ExtResource("17_a4oee")]
 
 [node name="Objects" type="Node" parent="."]
 
@@ -7342,6 +7342,7 @@ position = Vector2(620, -57)
 scale = Vector2(1.5, 1.5)
 transitioner = NodePath("../../LevelTransition/Transitions")
 character = NodePath("../../Player")
+keys_to_open = 1.0
 
 [node name="BouncePad" parent="Objects" instance=ExtResource("11_p6v8u")]
 z_index = 1

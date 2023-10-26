@@ -35,8 +35,6 @@ func _physics_process(delta):
 	update_animation_parameters()
 	update_sprite_direction()
 
-	print(player_vars.key_count)
-
 func update_animation_parameters():
 	animation_tree.set("parameters/Move/blend_position", direction.x)
 
