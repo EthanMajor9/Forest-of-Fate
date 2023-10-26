@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dbyfh6um8bqvy"]
+[gd_scene load_steps=24 format=3 uid="uid://dbyfh6um8bqvy"]
 
 [ext_resource type="Script" path="res://Levels/LevelScripts/level1.gd" id="1_milih"]
 [ext_resource type="PackedScene" uid="uid://dbfix3csl8qc1" path="res://UI/parallax_background.tscn" id="2_35mnc"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cyx7k57udk6oy" path="res://Objects/coin.tscn" id="17_pttd0"]
 [ext_resource type="PackedScene" uid="uid://yokdcd8x1dpx" path="res://Managers/position_manager.tscn" id="18_k6g48"]
 [ext_resource type="AudioStream" uid="uid://b8ejmkoflto7j" path="res://Audio/Music/Free Orchestral Music Pack/Aspiration Woods (Area Theme).wav" id="19_ehdoo"]
+[ext_resource type="PackedScene" uid="uid://dd14pjclmpyra" path="res://Enemies/snail.tscn" id="20_fbs4y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2uxa"]
 texture = ExtResource("5_yhj8w")
@@ -1015,6 +1016,7 @@ texture = ExtResource("5_yhj8w")
 3:18/0 = 0
 3:18/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:18/0/physics_layer_0/angular_velocity = 0.0
+3:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:18/0 = 0
 4:18/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:18/0/physics_layer_0/angular_velocity = 0.0
@@ -7334,3 +7336,6 @@ scale = Vector2(100, 1)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_ehdoo")
 autoplay = true
+
+[node name="Snail" parent="." instance=ExtResource("20_fbs4y")]
+position = Vector2(348, 64)

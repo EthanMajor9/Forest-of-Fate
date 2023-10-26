@@ -34,6 +34,7 @@ func _physics_process(delta):
 	move_and_slide()
 	update_animation_parameters()
 	update_sprite_direction()
+	check_health()
 
 func update_animation_parameters():
 	animation_tree.set("parameters/Move/blend_position", direction.x)
@@ -43,4 +44,9 @@ func update_sprite_direction():
 		sprite.flip_h = true;
 	elif direction.x > 0:
 		sprite.flip_h = false;
+
+func check_health():
+	if player_vars.health <= 0:
+		self.position = Vector2.ZERO
+		player_vars.health = 100
 
