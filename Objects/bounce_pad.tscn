@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cp6o0ukxmvee"]
 
 [ext_resource type="Script" path="res://Objects/ObjectScripts/bounce_pad.gd" id="1_4ipgl"]
-[ext_resource type="Texture2D" uid="uid://dpxl3wp63205t" path="res://Art/bouncepad.png" id="1_rbeoa"]
+[ext_resource type="Texture2D" uid="uid://dpxl3wp63205t" path="res://Art/Custom/Bouncepad/bouncepad.png" id="1_rbeoa"]
 [ext_resource type="AudioStream" uid="uid://bd21wemkmndiq" path="res://Audio/SFX/sfx_jump_07-80241.mp3" id="3_rs5qy"]
 
 [sub_resource type="Animation" id="Animation_qpfkc"]

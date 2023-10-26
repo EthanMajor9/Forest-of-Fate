@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlga8r6djh4tv"]
 
 [ext_resource type="Script" path="res://Objects/ObjectScripts/moving_platform.gd" id="1_tf5wk"]
-[ext_resource type="Texture2D" uid="uid://dvrv5sot4fncw" path="res://Art/oak_woods_v1.0/decorations/fence_1.png" id="2_dixqs"]
+[ext_resource type="Texture2D" uid="uid://dvrv5sot4fncw" path="res://Art/3rdParty/oak_woods_v1.0/decorations/fence_1.png" id="2_dixqs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjt0u"]
 size = Vector2(70, 20)

@@ -1,12 +1,12 @@
 [gd_scene load_steps=24 format=3 uid="uid://dvpgdw808y1lp"]
 
-[ext_resource type="Texture2D" uid="uid://c40yjffboxac3" path="res://Art/oak_woods_v1.0/background/background_layer_1.png" id="1_m0a24"]
-[ext_resource type="Texture2D" uid="uid://bvxw1ym4bgypi" path="res://Art/oak_woods_v1.0/background/background_layer_2.png" id="2_m1yoc"]
-[ext_resource type="Texture2D" uid="uid://cmnrg801tgbny" path="res://Art/oak_woods_v1.0/background/background_layer_3.png" id="3_o5prh"]
+[ext_resource type="Texture2D" uid="uid://c40yjffboxac3" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_1.png" id="1_o8yb6"]
+[ext_resource type="Texture2D" uid="uid://bvxw1ym4bgypi" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_2.png" id="2_oiq2s"]
+[ext_resource type="Texture2D" uid="uid://cmnrg801tgbny" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_3.png" id="3_nd4bh"]
 [ext_resource type="PackedScene" uid="uid://xda1270hkbor" path="res://Characters/Player/player.tscn" id="4_ih74s"]
-[ext_resource type="Texture2D" uid="uid://uhqvywcfh25y" path="res://Art/oak_woods_v1.0/oak_woods_tileset.png" id="5_7ncym"]
-[ext_resource type="Texture2D" uid="uid://bn750e5cu2uuc" path="res://Art/Village/TX Tileset Ground.png" id="6_cvr5v"]
-[ext_resource type="Texture2D" uid="uid://biyrmy3xh7t0q" path="res://Art/Village/TX Village Props.png" id="7_bgt6m"]
+[ext_resource type="Texture2D" uid="uid://uhqvywcfh25y" path="res://Art/3rdParty/oak_woods_v1.0/oak_woods_tileset.png" id="5_y8roy"]
+[ext_resource type="Texture2D" uid="uid://bn750e5cu2uuc" path="res://Art/3rdParty/Village/TX Tileset Ground.png" id="6_r1enb"]
+[ext_resource type="Texture2D" uid="uid://biyrmy3xh7t0q" path="res://Art/3rdParty/Village/TX Village Props.png" id="7_loo8h"]
 [ext_resource type="PackedScene" uid="uid://bjcafqxrlu2p5" path="res://UI/transitions.tscn" id="8_k3ui7"]
 [ext_resource type="PackedScene" uid="uid://b6cblsqytp150" path="res://Levels/level_2.tscn" id="9_s1rhu"]
 [ext_resource type="PackedScene" uid="uid://cemir5g26gluw" path="res://Objects/portal.tscn" id="10_1uxx2"]
@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bglg3iiw73ea3" path="res://UI/coin_count.tscn" id="19_6r1lk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2uxa"]
-texture = ExtResource("5_7ncym")
+texture = ExtResource("5_y8roy")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1264,7 +1264,7 @@ texture = ExtResource("5_7ncym")
 30:21/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mkxbq"]
-texture = ExtResource("6_cvr5v")
+texture = ExtResource("6_r1enb")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -3318,7 +3318,7 @@ texture = ExtResource("6_cvr5v")
 31:31/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ummbc"]
-texture = ExtResource("7_bgt6m")
+texture = ExtResource("7_loo8h")
 26:0/0 = 0
 26:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 26:0/0/physics_layer_0/angular_velocity = 0.0
@@ -7265,7 +7265,7 @@ offset_left = -444.0
 offset_top = -500.0
 offset_right = 1006.0
 offset_bottom = 247.0
-texture = ExtResource("1_m0a24")
+texture = ExtResource("1_o8yb6")
 metadata/_edit_use_anchors_ = true
 
 [node name="Layer2" type="TextureRect" parent="Background"]
@@ -7278,7 +7278,7 @@ offset_left = -449.0
 offset_top = -493.0
 offset_right = 1004.0
 offset_bottom = 252.0
-texture = ExtResource("2_m1yoc")
+texture = ExtResource("2_oiq2s")
 metadata/_edit_use_anchors_ = true
 
 [node name="Layer3" type="TextureRect" parent="Background"]
@@ -7291,7 +7291,7 @@ offset_left = -445.0
 offset_top = -502.0
 offset_right = 995.0
 offset_bottom = 246.0
-texture = ExtResource("3_o5prh")
+texture = ExtResource("3_nd4bh")
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." instance=ExtResource("4_ih74s")]

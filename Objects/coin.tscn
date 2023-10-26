@@ -1,10 +1,25 @@
 [gd_scene load_steps=7 format=3 uid="uid://cyx7k57udk6oy"]
 
 [ext_resource type="Script" path="res://Objects/ObjectScripts/coin.gd" id="1_0qeor"]
-[ext_resource type="Texture2D" uid="uid://c5yi0seukiykc" path="res://Art/Coin_Gems/MonedaD.png" id="1_bfswe"]
+[ext_resource type="Texture2D" uid="uid://c5yi0seukiykc" path="res://Art/3rdParty/Coin_Gems/MonedaD.png" id="2_eqvj3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ayiv"]
 radius = 8.0
+
+[sub_resource type="Animation" id="Animation_3fjet"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_3yjdr"]
 resource_name = "rotate"
@@ -20,7 +35,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_bfswe")]
+"values": [ExtResource("2_eqvj3")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -47,21 +62,6 @@ tracks/2/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_3fjet"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBody2D/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_83a83"]
 _data = {
 "RESET": SubResource("Animation_3fjet"),
@@ -74,7 +74,7 @@ script = ExtResource("1_0qeor")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("1_bfswe")
+texture = ExtResource("2_eqvj3")
 hframes = 5
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D"]

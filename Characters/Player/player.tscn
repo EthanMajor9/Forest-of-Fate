@@ -1,9 +1,9 @@
 [gd_scene load_steps=28 format=3 uid="uid://xda1270hkbor"]
 
 [ext_resource type="Script" path="res://Characters/Player/player.gd" id="1_1h1pm"]
-[ext_resource type="Texture2D" uid="uid://cr6i3poj65rke" path="res://Art/Mossy Cavern Art Pack/BlueWizard/2BlueWizardIdle/idle_spritesheet.png" id="2_x1idw"]
-[ext_resource type="Texture2D" uid="uid://l4karg47ps8g" path="res://Art/Mossy Cavern Art Pack/BlueWizard/2BlueWizardWalk/walk_spritesheet.png" id="3_1h0b4"]
-[ext_resource type="Texture2D" uid="uid://cipsxk1ie4pm1" path="res://Art/Mossy Cavern Art Pack/BlueWizard/2BlueWizardJump/jump_spritesheet.png" id="4_58uhb"]
+[ext_resource type="Texture2D" uid="uid://cr6i3poj65rke" path="res://Art/3rdParty/Mossy Cavern Art Pack/BlueWizard/2BlueWizardIdle/idle_spritesheet.png" id="2_7luti"]
+[ext_resource type="Texture2D" uid="uid://cipsxk1ie4pm1" path="res://Art/3rdParty/Mossy Cavern Art Pack/BlueWizard/2BlueWizardJump/jump_spritesheet.png" id="3_4hcek"]
+[ext_resource type="Texture2D" uid="uid://l4karg47ps8g" path="res://Art/3rdParty/Mossy Cavern Art Pack/BlueWizard/2BlueWizardWalk/walk_spritesheet.png" id="4_r0vxv"]
 [ext_resource type="Script" path="res://Characters/Player/PlayerStates/character_state_machine.gd" id="5_jc8qs"]
 [ext_resource type="Script" path="res://Characters/Player/PlayerStates/ground_state.gd" id="6_34e4t"]
 [ext_resource type="Script" path="res://Characters/Player/PlayerStates/air_state.gd" id="7_tg3rd"]
@@ -27,7 +27,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_x1idw")]
+"values": [ExtResource("2_7luti")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -68,7 +68,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_x1idw")]
+"values": [ExtResource("2_7luti")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -107,7 +107,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_58uhb")]
+"values": [ExtResource("3_4hcek")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -148,7 +148,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_1h0b4")]
+"values": [ExtResource("4_r0vxv")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -234,7 +234,7 @@ script = ExtResource("1_1h1pm")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-62, -58)
 scale = Vector2(0.25, 0.245)
-texture = ExtResource("2_x1idw")
+texture = ExtResource("2_7luti")
 centered = false
 hframes = 20
 

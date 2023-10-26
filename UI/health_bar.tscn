@@ -1,11 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2b88cfy4kbd8"]
 
+[ext_resource type="Texture2D" uid="uid://chmjsol28eid4" path="res://Art/Custom/Health Bar/bar-progress.png" id="1_jgkc7"]
 [ext_resource type="Script" path="res://UI/UIScripts/health_bar.gd" id="1_js7c1"]
-[ext_resource type="Texture2D" uid="uid://chmjsol28eid4" path="res://Art/Health Bar/bar-progress.png" id="1_xdoxh"]
-[ext_resource type="Texture2D" uid="uid://oaxyhd20uo4c" path="res://Art/Health Bar/bar-over.png" id="2_ydsgj"]
+[ext_resource type="Texture2D" uid="uid://oaxyhd20uo4c" path="res://Art/Custom/Health Bar/bar-over.png" id="2_ne7wv"]
 
 [node name="TextureProgressBar" type="TextureProgressBar"]
-visible = false
 offset_left = 32.0
 offset_top = 24.0
 offset_right = 384.0
@@ -16,9 +15,9 @@ stretch_margin_left = 3
 stretch_margin_top = 3
 stretch_margin_right = 3
 stretch_margin_bottom = 3
-texture_under = ExtResource("1_xdoxh")
-texture_over = ExtResource("2_ydsgj")
-texture_progress = ExtResource("1_xdoxh")
+texture_under = ExtResource("1_jgkc7")
+texture_over = ExtResource("2_ne7wv")
+texture_progress = ExtResource("1_jgkc7")
 tint_under = Color(0.156863, 0.156863, 0.156863, 1)
 tint_over = Color(0.372549, 0.294118, 0.145098, 1)
 tint_progress = Color(0.658824, 0.227451, 0.227451, 1)

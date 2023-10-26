@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ci07h3xddsfxe"]
 
-[ext_resource type="Texture2D" uid="uid://di8ruo4bl324r" path="res://Art/Keys/key-white.png" id="1_lyjfh"]
+[ext_resource type="Texture2D" uid="uid://di8ruo4bl324r" path="res://Art/3rdParty/Keys/key-white.png" id="1_lyjfh"]
 [ext_resource type="Script" path="res://UI/UIScripts/key_count.gd" id="1_w6wqp"]
 
 [sub_resource type="Animation" id="Animation_jtbjx"]

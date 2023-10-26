@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cyd4hoddlfpf7"]
 
-[ext_resource type="Texture2D" uid="uid://di8ruo4bl324r" path="res://Art/Keys/key-white.png" id="1_oub1b"]
 [ext_resource type="Script" path="res://Objects/ObjectScripts/collectible_key.gd" id="1_t1jjj"]
+[ext_resource type="Texture2D" uid="uid://di8ruo4bl324r" path="res://Art/3rdParty/Keys/key-white.png" id="2_rajmp"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_h63vv"]
 
@@ -34,7 +34,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_oub1b")]
+"values": [ExtResource("2_rajmp")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -73,7 +73,7 @@ script = ExtResource("1_t1jjj")
 [node name="Key" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Key"]
-texture = ExtResource("1_oub1b")
+texture = ExtResource("2_rajmp")
 hframes = 12
 
 [node name="Area2D" type="Area2D" parent="Key"]
