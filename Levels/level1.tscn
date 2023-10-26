@@ -1,9 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://dbyfh6um8bqvy"]
+[gd_scene load_steps=23 format=3 uid="uid://dbyfh6um8bqvy"]
 
 [ext_resource type="Script" path="res://Levels/LevelScripts/level1.gd" id="1_milih"]
-[ext_resource type="Texture2D" uid="uid://c40yjffboxac3" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_1.png" id="1_x7j27"]
-[ext_resource type="Texture2D" uid="uid://bvxw1ym4bgypi" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_2.png" id="2_osmgl"]
-[ext_resource type="Texture2D" uid="uid://cmnrg801tgbny" path="res://Art/3rdParty/oak_woods_v1.0/background/background_layer_3.png" id="3_nybpd"]
+[ext_resource type="PackedScene" uid="uid://dbfix3csl8qc1" path="res://UI/parallax_background.tscn" id="2_35mnc"]
 [ext_resource type="PackedScene" uid="uid://xda1270hkbor" path="res://Characters/Player/player.tscn" id="4_3oaqo"]
 [ext_resource type="Texture2D" uid="uid://uhqvywcfh25y" path="res://Art/3rdParty/oak_woods_v1.0/oak_woods_tileset.png" id="5_yhj8w"]
 [ext_resource type="Texture2D" uid="uid://bn750e5cu2uuc" path="res://Art/3rdParty/Village/TX Tileset Ground.png" id="6_615q3"]
@@ -7255,52 +7253,13 @@ sources/12 = SubResource("TileSetAtlasSource_c2uxa")
 script = ExtResource("1_milih")
 transitioner = NodePath("LevelTransition/Transitions")
 
-[node name="Background" type="Node" parent="."]
-
-[node name="Layer1" type="TextureRect" parent="Background"]
-anchors_preset = -1
-anchor_left = -0.257
-anchor_top = -0.30875
-anchor_right = 0.178
-anchor_bottom = 0.0425
-offset_left = -444.0
-offset_top = -500.0
-offset_right = 1006.0
-offset_bottom = 247.0
-texture = ExtResource("1_x7j27")
-metadata/_edit_use_anchors_ = true
-
-[node name="Layer2" type="TextureRect" parent="Background"]
-anchors_preset = -1
-anchor_left = -0.249
-anchor_top = -0.31875
-anchor_right = 0.183
-anchor_bottom = 0.03125
-offset_left = -449.0
-offset_top = -493.0
-offset_right = 1004.0
-offset_bottom = 252.0
-texture = ExtResource("2_osmgl")
-metadata/_edit_use_anchors_ = true
-
-[node name="Layer3" type="TextureRect" parent="Background"]
-anchors_preset = -1
-anchor_left = -0.255
-anchor_top = -0.3125
-anchor_right = 0.191
-anchor_bottom = 0.045
-offset_left = -445.0
-offset_top = -502.0
-offset_right = 995.0
-offset_bottom = 246.0
-texture = ExtResource("3_nybpd")
-metadata/_edit_use_anchors_ = true
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_35mnc")]
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(-26, 30)
 scale = Vector2(0.85, 0.85)
 offset = Vector2(40, -150)
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(1.25, 1.25)
 process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
@@ -7369,7 +7328,7 @@ position = Vector2(250, 27)
 
 [node name="PositionManager" parent="PositionManagerParent" instance=ExtResource("18_k6g48")]
 z_index = 1
-position = Vector2(247, 232)
+position = Vector2(237, 186)
 scale = Vector2(100, 1)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
