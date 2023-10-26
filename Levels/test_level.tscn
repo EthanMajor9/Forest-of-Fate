@@ -7326,9 +7326,13 @@ scene_to_load = ExtResource("9_s1rhu")
 
 [node name="UI" type="Node" parent="."]
 
+[node name="coin_count" parent="UI" instance=ExtResource("19_6r1lk")]
+
 [node name="KeyCountUI" parent="UI" instance=ExtResource("16_6t27v")]
 
-[node name="HealthBar" parent="UI" instance=ExtResource("17_a4oee")]
+[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+
+[node name="HealthBar" parent="UI/CanvasLayer" instance=ExtResource("17_a4oee")]
 
 [node name="Objects" type="Node" parent="."]
 
@@ -7353,6 +7357,10 @@ move_to = Vector2(0, -40)
 z_index = 1
 position = Vector2(74, 31)
 
+[node name="Coin" parent="Objects" instance=ExtResource("18_ax261")]
+z_index = 1
+position = Vector2(250, 27)
+
 [node name="PositionManagerParent" type="Node" parent="."]
 
 [node name="PositionManager" parent="PositionManagerParent" instance=ExtResource("12_rr7fm")]
@@ -7363,9 +7371,3 @@ scale = Vector2(100, 1)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_rrmwf")
 autoplay = true
-
-[node name="Coin" parent="." instance=ExtResource("18_ax261")]
-z_index = 1
-position = Vector2(250, 27)
-
-[node name="coin_count" parent="." instance=ExtResource("19_6r1lk")]

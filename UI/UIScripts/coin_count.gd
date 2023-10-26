@@ -7,6 +7,7 @@ var player_vars : PlayerVariables
 
 func _ready():
 	player_vars = get_node("/root/PlayerVariables")
+	container.visible = true
 	animation_player.play("rotate")
 
 func _process(_delta):

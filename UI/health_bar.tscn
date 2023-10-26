@@ -1,27 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2b88cfy4kbd8"]
+[gd_scene load_steps=4 format=3 uid="uid://b2b88cfy4kbd8"]
 
 [ext_resource type="Script" path="res://UI/UIScripts/health_bar.gd" id="1_js7c1"]
-[ext_resource type="Theme" uid="uid://1sm0rg4hmi27" path="res://UI/UIMaterials/health_bar.tres" id="2_dcfet"]
+[ext_resource type="Texture2D" uid="uid://chmjsol28eid4" path="res://Art/Health Bar/bar-progress.png" id="1_xdoxh"]
+[ext_resource type="Texture2D" uid="uid://oaxyhd20uo4c" path="res://Art/Health Bar/bar-over.png" id="2_ydsgj"]
 
-[node name="UI" type="CanvasLayer"]
-script = ExtResource("1_js7c1")
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="TextureProgressBar" type="TextureProgressBar"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
-
-[node name="Control" type="Control" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/Control"]
-layout_mode = 0
-offset_right = 418.0
-offset_bottom = 27.0
-theme = ExtResource("2_dcfet")
-value = 40.61
-show_percentage = false
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 384.0
+offset_bottom = 56.0
+value = 50.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("1_xdoxh")
+texture_over = ExtResource("2_ydsgj")
+texture_progress = ExtResource("1_xdoxh")
+tint_under = Color(0.156863, 0.156863, 0.156863, 1)
+tint_over = Color(0.372549, 0.294118, 0.145098, 1)
+tint_progress = Color(1, 0.301961, 0.231373, 0.8)
+script = ExtResource("1_js7c1")
