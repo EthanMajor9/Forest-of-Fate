@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyd4hoddlfpf7"]
+[gd_scene load_steps=8 format=3 uid="uid://cyd4hoddlfpf7"]
 
 [ext_resource type="Script" path="res://Objects/ObjectScripts/collectible_key.gd" id="1_t1jjj"]
 [ext_resource type="Texture2D" uid="uid://di8ruo4bl324r" path="res://Art/3rdParty/Keys/key-white.png" id="2_rajmp"]
+[ext_resource type="AudioStream" uid="uid://biekldlxp82de" path="res://Audio/SFX/pickup.mp3" id="3_3dcgx"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_h63vv"]
 
@@ -88,4 +89,8 @@ libraries = {
 "": SubResource("AnimationLibrary_ycv8l")
 }
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3dcgx")
+
 [connection signal="body_entered" from="Key/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

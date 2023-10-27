@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_player : AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var player_vars : PlayerVariables
 var speed : float = 40
@@ -36,5 +37,7 @@ func _on_detection_area_body_exited(body):
 
 func _on_hit_detection_body_entered(body):
 	if body is Player:
-		player_vars.health -= 50
+		player_vars.health -= 40
+		body.velocity.y = -200
+		audio_player.play(0)
 		

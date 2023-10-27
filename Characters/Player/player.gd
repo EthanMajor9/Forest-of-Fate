@@ -3,6 +3,7 @@ extends CharacterBody2D
 class_name Player
 
 @export var move_speed : float = 200.0
+@export var respawn_pos : Vector2 = Vector2.ZERO
 
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var animation_tree : AnimationTree = $AnimationTree
@@ -35,6 +36,7 @@ func _physics_process(delta):
 	update_animation_parameters()
 	update_sprite_direction()
 	check_health()
+	check_stuck()
 
 func update_animation_parameters():
 	animation_tree.set("parameters/Move/blend_position", direction.x)
@@ -47,6 +49,11 @@ func update_sprite_direction():
 
 func check_health():
 	if player_vars.health <= 0:
-		self.position = Vector2.ZERO
+		self.position = respawn_pos
 		player_vars.health = 100
+
+func check_stuck():
+	if Input.get_action_strength("stuck") > 0:
+		self.position = respawn_pos
+		
 

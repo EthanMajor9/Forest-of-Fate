@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlga8r6djh4tv"]
 
 [ext_resource type="Script" path="res://Objects/ObjectScripts/moving_platform.gd" id="1_tf5wk"]
-[ext_resource type="Texture2D" uid="uid://dvrv5sot4fncw" path="res://Art/3rdParty/oak_woods_v1.0/decorations/fence_1.png" id="2_dixqs"]
+[ext_resource type="Texture2D" uid="uid://3we04o0i8b68" path="res://Art/3rdParty/Village/moving_platform.png" id="2_qep1k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjt0u"]
-size = Vector2(70, 20)
+size = Vector2(62, 7)
 
 [node name="MovingPlatform" type="Node2D" node_paths=PackedStringArray("platform")]
 script = ExtResource("1_tf5wk")
@@ -13,7 +13,9 @@ platform = NodePath("Platform")
 [node name="Platform" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform"]
-texture = ExtResource("2_dixqs")
+position = Vector2(293, -276)
+texture = ExtResource("2_qep1k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(-2, -0.5)
 shape = SubResource("RectangleShape2D_tjt0u")
