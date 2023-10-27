@@ -2,7 +2,7 @@
   <img src="icon.svg" alt="Godot 4 Game Logo" width="200">
 </p>
 
-# Godot 4 Game - VARLab Code Jam
+# Godot 4 Game - Forest of Fate
 
 Welcome to my 2D platformer game created for the VARLab Code Jam. This project is an opportunity for me to dive into Godot and explore game development in this fantastic engine.
 
